@@ -1,0 +1,14 @@
+{
+	"name": "nuffer-server",
+	"author": "Jacob Pedersen <jacob@bytesizedpacket.com> (https://jacobpedersen.me)",
+
+	"scripts": {
+		"start": "node ./server.js"
+	},
+	
+	"dependencies": {
+		"socket.io": "1.3.x"
+	},
+
+	"engine": "node >= 4.0.0"
+}
