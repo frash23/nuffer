@@ -7,10 +7,10 @@ io.listen(7566);
 
 function socketConnect(sock) {
 	log('New connection: Socket ID '+ sock.id +' from IP '+ sock.handshake.address);
-	sock.emit('chatMsg', 'lololol');
+	sock.emit('debug', 'Verified connection working both ways');
 
 	sock.on( 'disconnect', ()=> socketDisconnect(sock) );
-	sock.on( 'auth', data=> auth(data.user, data.passhash) );
+	sock.on( 'auth', data=> auth(sock, data.user, data.passhash) );
 }
 
 function socketDisconnect(sock) {
@@ -21,7 +21,7 @@ function socketDisconnect(sock) {
 	} else log('Unathorized socket '+ sock.id +' disconneceted');
 };
 
-function auth(user, passhash) {
+function auth(sock, user, passhash) {
 	log('Auth req: '+ user +', '+ passhash);
 }
 
