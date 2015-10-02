@@ -220,11 +220,6 @@ var bcrypt = (function() {
 		}, 0);
 	};
 
-	/*
-	 * callback: a function that will be passed the hash when it is complete
-	 * progress: optional - this function will be called every time 1% of hashing
-	 *      is complete.
-	 */
 	var hashpw = function(password, salt, callback, progress) {
 		if(!salt) salt = gensalt();
 		var real_salt;
