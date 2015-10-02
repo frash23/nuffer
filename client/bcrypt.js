@@ -308,8 +308,6 @@ var bcrypt = (function() {
 		 * run them twice to achieve a length of 22 */
 		output += Math.random().toString(36).substr(-11);
 		output += Math.random().toString(36).substr(-11);
-		output += Math.random().toString(36).substr(-16);
-		//output.push(encode_base64(s1, BCRYPT_SALT_LEN));
 		return output;
 	};
 
